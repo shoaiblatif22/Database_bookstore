@@ -23,7 +23,7 @@ Your tests will depend on data stored in PostgreSQL to run.
 If seed data is provided (or you already created it), you can skip this step.
 
 -- EXAMPLE
--- (file: spec/seeds_{table_name}.sql)
+-- (file: spec/seeds_{table_name}.sql) #
 
 -- Write your SQL seed here. 
 
