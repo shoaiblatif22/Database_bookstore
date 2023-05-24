@@ -96,24 +96,27 @@ Using comments, define the method signatures (arguments and return value) and wh
 # Repository class
 # (in lib/student_repository.rb)
 
-class StudentRepository
+class BookRepository
 
   # Selecting all records
   # No arguments
   def all
     # Executes the SQL query:
-    # SELECT id, name, cohort_name FROM students;
+    # SQL = 'SELECT id, title, author_name FROM books;'
 
-    # Returns an array of Student objects.
+    # Returns an array of book objects.
+    # books = []
+
   end
 
-  # Gets a single record by its ID
+  # Gets a single book by its ID
   # One argument: the id (number)
   def find(id)
     # Executes the SQL query:
-    # SELECT id, name, cohort_name FROM students WHERE id = $1;
+    # SELECT id, title, author_name FROM books WHERE id = 4;
 
-    # Returns a single Student object.
+    # Returns a single book object.
+
   end
 
   # Add more methods below for each operation you'd like to implement.
@@ -137,17 +140,17 @@ These examples will later be encoded as RSpec tests.
 # EXAMPLES
 
 # 1
-# Get all students
+# Get all books
 
-repo = StudentRepository.new
+repo = BookRepository.new
+books = repo.all
+books.length # =>  2
 
-students = repo.all
 
-students.length # =>  2
 
-students[0].id # =>  1
-students[0].name # =>  'David'
-students[0].cohort_name # =>  'April 2022'
+books.first.id # =>  1
+books.first.title # =>  ''
+books.first.author_name # =>  ''
 
 students[1].id # =>  2
 students[1].name # =>  'Anna'
